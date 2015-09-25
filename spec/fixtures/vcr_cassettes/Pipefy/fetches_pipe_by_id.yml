@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.pipefy.com/pipes/15267
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Fri, 25 Sep 2015 21:45:59 GMT
+      Status:
+      - 302 Found
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/v2/pipes/15267
+      Content-Type:
+      - text/html; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - 14d2a598-dfdb-4ed2-ac11-e9de1c9be0d5
+      X-Runtime:
+      - '0.095099'
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://app.pipefy.com/v2/pipes/15267">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 21:45:58 GMT
+- request:
+    method: get
+    uri: https://app.pipefy.com/v2/pipes/15267
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Fri, 25 Sep 2015 21:45:59 GMT
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f679f1f365a4ef0e2474b2ba6a6ab6fd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - f4420b6b-eed6-47f0-9e82-db5e9f261925
+      X-Runtime:
+      - '0.159934'
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTUyNjcsIm5hbWUiOiJTY29yZWNhcmQiLCJjcmVhdGVkX2F0Ijoi
+        MjAxNS0wOS0yMVQxOTowNDozOS4xMjAtMDM6MDAiLCJ1cGRhdGVkX2F0Ijoi
+        MjAxNS0wOS0yNVQxNjo0ODozNS40MzEtMDM6MDAiLCJ0b2tlbiI6IjM2MmRk
+        MTg4OTU2NmY3ZDQ0OGM5MGI2Nzc3ZjQ2YWVmMWQ1NTcyNDQiLCJjYW5fZWRp
+        dCI6dHJ1ZSwidXNlcnMiOltdLCJsYWJlbHMiOltdLCJwaGFzZXMiOlt7Imlk
+        IjoxMTgwNDYsIm5hbWUiOiJTdGFydCBmb3JtIiwiZGVzY3JpcHRpb24iOm51
+        bGwsImRvbmUiOmZhbHNlLCJwaXBlX2lkIjoxNTI2NywiaW5kZXgiOjAuMCwi
+        ZHJhZnQiOnRydWUsImNhcmRzIjpbeyJpZCI6MTIzNDM1LCJ0aXRsZSI6IkRy
+        YWZ0IiwiY3VycmVudF9waGFzZV9pZCI6MTE4MDQ2LCJkdWVfZGF0ZSI6bnVs
+        bCwiaW5kZXgiOm51bGx9LHsiaWQiOjEyMDYxMCwidGl0bGUiOiJEcmFmdCIs
+        ImN1cnJlbnRfcGhhc2VfaWQiOjExODA0NiwiZHVlX2RhdGUiOm51bGwsImlu
+        ZGV4IjpudWxsfSx7ImlkIjoxMTcwMTIsInRpdGxlIjoiRHJhZnQiLCJjdXJy
+        ZW50X3BoYXNlX2lkIjoxMTgwNDYsImR1ZV9kYXRlIjpudWxsLCJpbmRleCI6
+        bnVsbH1dfSx7ImlkIjoxMTgwNDcsIm5hbWUiOiJJbmJveCIsImRlc2NyaXB0
+        aW9uIjoiSGVyZSBjb21lcyB0aGUgc3R1ZmYgcGVvcGxlIGNyZWF0ZWQgZm9y
+        IHRoaXMgcGlwZS4iLCJkb25lIjpmYWxzZSwicGlwZV9pZCI6MTUyNjcsImlu
+        ZGV4IjoxLjAsImRyYWZ0IjpmYWxzZSwiY2FyZHMiOlt7ImlkIjoxMjY0NTgs
+        InRpdGxlIjoidGVzdCIsImN1cnJlbnRfcGhhc2VfaWQiOjExODA0NywiZHVl
+        X2RhdGUiOm51bGwsImluZGV4IjoxLjB9LHsiaWQiOjEyNjQ1OSwidGl0bGUi
+        OiJ0ZXN0IGEiLCJjdXJyZW50X3BoYXNlX2lkIjoxMTgwNDcsImR1ZV9kYXRl
+        IjpudWxsLCJpbmRleCI6Mi4wfV19LHsiaWQiOjExODA0OCwibmFtZSI6IlJl
+        dmlld2luZyIsImRlc2NyaXB0aW9uIjoiU2hvdyB0aW1lISBIZXJlIGNvbWVz
+        IHRoZSBzdHVmZiBwZW9wbGUgYXJlIGRvaW5nLiIsImRvbmUiOmZhbHNlLCJw
+        aXBlX2lkIjoxNTI2NywiaW5kZXgiOjIuMCwiZHJhZnQiOmZhbHNlLCJjYXJk
+        cyI6W3siaWQiOjEyMDYxOCwidGl0bGUiOiJWaWFjbyBDb25zdHJ1Y3Rpb24g
+        Q29ycCIsImN1cnJlbnRfcGhhc2VfaWQiOjExODA0OCwiZHVlX2RhdGUiOm51
+        bGwsImluZGV4IjowLjB9XX0seyJpZCI6MTI2MjcxLCJuYW1lIjoiRml4aW5n
+        IiwiZGVzY3JpcHRpb24iOiJTb21ldGhpbmcgaXMgd3Jvbmcgd2l0aCB0aGUg
+        c2NvcmVjYXJkLiBXZSBuZWVkIGEgbGl0dGxlIG1vcmUgdGltZSB0byB0cnkg
+        YW5kIGZpeCBpdC4gIiwiZG9uZSI6ZmFsc2UsInBpcGVfaWQiOjE1MjY3LCJp
+        bmRleCI6Mi41LCJkcmFmdCI6ZmFsc2UsImNhcmRzIjpbXX0seyJpZCI6MTE4
+        MDQ5LCJuYW1lIjoiRG9uZSIsImRlc2NyaXB0aW9uIjoiUmVzdCBpbiBwZWFj
+        ZeKApiBIZXJlIHN0YXlzIHRoZSBmaW5pc2hlZCBjYXJkcy4iLCJkb25lIjp0
+        cnVlLCJwaXBlX2lkIjoxNTI2NywiaW5kZXgiOjMuMCwiZHJhZnQiOmZhbHNl
+        LCJjYXJkcyI6W3siaWQiOjEyNjQ5OCwidGl0bGUiOiJVcmwgVGVzdCIsImN1
+        cnJlbnRfcGhhc2VfaWQiOjExODA0OSwiZHVlX2RhdGUiOm51bGwsImluZGV4
+        IjowLjB9XX0seyJpZCI6MTI2Mjc4LCJuYW1lIjoiQnJva2VuIiwiZGVzY3Jp
+        cHRpb24iOiJUaGVyZSBpcyBzb21lIHByb2JsZW0gdGhhdCBwcmV2ZW50cyB0
+        aGUgc2NvcmVjYXJkIGZyb20gd29ya2luZyBwcm9wZXJseS4gV2UgYXJlIG5v
+        dCBnb2luZyB0byBmaXggaXQgc28gdGhlIHVuZGVyd3JpdGluZyB0ZWFtIHdp
+        bGwgbmVlZCB0byBzY29yZSB0aGUgYXBwbGljYXRpb24gbWFudWFsbHkuICIs
+        ImRvbmUiOnRydWUsInBpcGVfaWQiOjE1MjY3LCJpbmRleCI6NC4wLCJkcmFm
+        dCI6ZmFsc2UsImNhcmRzIjpbXX1dfQ==
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 21:45:59 GMT
+recorded_with: VCR 2.9.3
