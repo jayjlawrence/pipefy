@@ -8,3 +8,5 @@
 /spec/reports/
 /tmp/
 .envrc
+*.gem
+.DS_Store
