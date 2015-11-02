@@ -17,4 +17,10 @@ describe Pipefy, :vcr => true do
     expect(subject.pipe(15267)).to include('name' => 'Scorecard')
   end
 
+  it 'creates new cards' do
+    expect(
+      subject.create_card("Scorecard", "Demo Card", {"URL" => "https://test.com/123"})
+    ).to(include('title' => 'Demo Card'))
+  end
+
 end

@@ -10,6 +10,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('<PIPEFY_TOKEN>') { ENV['PIPEFY_TOKEN'] }
   c.filter_sensitive_data('<PIPEFY_SESSION_COOKIE>') do |interaction|
     cookies = interaction.response.headers['Set-Cookie']
-    cookies.find {|x| x =~ /_pipefy_session/i }
+    cookies.find {|x| x =~ /_pipefy_session/i } unless cookies.nil?
   end
+
 end

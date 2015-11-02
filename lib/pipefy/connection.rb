@@ -14,7 +14,7 @@ module Pipefy
       @conn = Faraday.new(:url => 'https://app.pipefy.com', headers: headers ) do |faraday|
         faraday.request  :json
         faraday.response :json, :content_type => /\bjson$/
-        faraday.response :logger                  # log requests to STDOUT
+        faraday.response :logger if ENV['PIPEFY_HTTP_LOG']
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
       end
@@ -27,6 +27,12 @@ module Pipefy
     end
     def pipe id
       @conn.get("/pipes/#{id}").body
+    end
+    def get *args
+      @conn.send(:get, *args)
+    end
+    def post *args
+      @conn.send(:post, *args)
     end
   end
 end
