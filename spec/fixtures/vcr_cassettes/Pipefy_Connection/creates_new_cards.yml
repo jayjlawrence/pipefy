@@ -1,0 +1,306 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.pipefy.com/pipes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"0577d9781d9986de6d7569b5b9d1c79c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - b192e838-774b-4259-a3a2-5c263eb68835
+      X-Runtime:
+      - '0.093923'
+      Date:
+      - Tue, 12 Jan 2016 16:32:01 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":7915,"name":"Loan Application","full_name":"liftforward - Loan
+        Application","url":"https://app.pipefy.com/pipes/7915.json"},{"id":28354,"name":"Background
+        Check","full_name":"liftforward - Background Check","url":"https://app.pipefy.com/pipes/28354.json"},{"id":28358,"name":"Documentation
+        Request","full_name":"liftforward - Documentation Request","url":"https://app.pipefy.com/pipes/28358.json"},{"id":28621,"name":"Growth
+        Hack Experiments","full_name":"liftforward - Growth Hack Experiments","url":"https://app.pipefy.com/pipes/28621.json"},{"id":31585,"name":"Bank
+        Spreads","full_name":"liftforward - Bank Spreads","url":"https://app.pipefy.com/pipes/31585.json"},{"id":31625,"name":"Quick
+        Track Site Visit","full_name":"liftforward - Quick Track Site Visit","url":"https://app.pipefy.com/pipes/31625.json"},{"id":31626,"name":"Paynet","full_name":"liftforward
+        - Paynet","url":"https://app.pipefy.com/pipes/31626.json"},{"id":31627,"name":"Closing","full_name":"liftforward
+        - Closing","url":"https://app.pipefy.com/pipes/31627.json"},{"id":31834,"name":"Growth
+        Hack Experiments (copy 1)","full_name":"liftforward - Growth Hack Experiments
+        (copy 1)","url":"https://app.pipefy.com/pipes/31834.json"}]'
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 16:32:01 GMT
+- request:
+    method: get
+    uri: https://app.pipefy.com/pipes/7915
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"718d8841be768bff947ca145b7676e23"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - f8782187-3feb-4a22-bdb0-154382eb674b
+      X-Runtime:
+      - '0.208359'
+      Date:
+      - Tue, 12 Jan 2016 16:32:01 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":7915,"name":"Loan Application","created_at":"2015-08-07T18:56:56.825-03:00","updated_at":"2016-01-12T14:26:41.749-02:00","token":"4d3e1da306c3320fc5048a25dc48b7ddb9a36890","can_edit":true,"users":[{"id":2746,"name":"Mike
+        Grassotti","username":"mikegrassotti","email":"<PIPEFY_EMAIL>","display_username":"mikegrassotti"},{"id":18056,"name":"drew3","username":"drew2","email":"drew@liftforward.com","display_username":"drew2"}],"labels":[{"id":27646,"name":"msft","color":"#4C51C9"},{"id":27647,"name":"VIP","color":"#F00E4A"}],"phases":[{"id":57116,"name":"Start
+        form","description":null,"done":false,"pipe_id":7915,"index":0.0,"draft":true,"cards":[{"id":33729,"title":"Test
+        loan","current_phase_id":57116,"due_date":null,"index":0.0},{"id":362019,"title":"Draft","current_phase_id":57116,"due_date":null,"index":null},{"id":265815,"title":"Draft","current_phase_id":57116,"due_date":null,"index":null},{"id":260670,"title":"Draft","current_phase_id":57116,"due_date":null,"index":null},{"id":36926,"title":"Draft","current_phase_id":57116,"due_date":null,"index":null}]},{"id":57117,"name":"Inbox","description":"Here
+        comes the stuff people created for this pipe.","done":false,"pipe_id":7915,"index":1.0,"draft":false,"cards":[{"id":300252,"title":"Lcc
+        of Colorado  13000 amone","current_phase_id":57117,"due_date":null,"index":9.0},{"id":300254,"title":"HURLEY
+        PACKAGING OF TEXAS INC 350000 c4b","current_phase_id":57117,"due_date":null,"index":11.0},{"id":300255,"title":"a24
+        hour storage llc  88000 business-capital","current_phase_id":57117,"due_date":null,"index":12.0},{"id":300256,"title":"Los
+        Polos Hermanos 12123 microsoft","current_phase_id":57117,"due_date":null,"index":13.0},{"id":300257,"title":"The
+        Cooke Company LLC 94000 multifunding","current_phase_id":57117,"due_date":null,"index":14.0},{"id":300258,"title":"Stream
+        Global Solutions 4000 mylift","current_phase_id":57117,"due_date":null,"index":15.0},{"id":300259,"title":"Claudia
+        Sandino 10000 borrow","current_phase_id":57117,"due_date":null,"index":16.0},{"id":300260,"title":"DROSOS
+        & ASSOCIATES PC 755000 business-capital","current_phase_id":57117,"due_date":null,"index":17.0},{"id":300261,"title":"netcast
+        bpo services llc  300000 business-capital","current_phase_id":57117,"due_date":null,"index":18.0},{"id":366149,"title":"mpg5","current_phase_id":57117,"due_date":null,"index":19.0},{"id":366150,"title":"mpg5
+        http://test.com/123","current_phase_id":57117,"due_date":null,"index":20.0},{"id":366151,"title":"mpg1","current_phase_id":57117,"due_date":null,"index":21.0},{"id":366154,"title":"mpg
+        78","current_phase_id":57117,"due_date":null,"index":22.0},{"id":370800,"title":"Demo
+        Card","current_phase_id":57117,"due_date":null,"index":23.0}]},{"id":254195,"name":"Awaiting
+        Decision","description":"","done":false,"pipe_id":7915,"index":2.0126953125,"draft":false,"cards":[{"id":300253,"title":"Yume
+        Consulting 17000 amone","current_phase_id":254195,"due_date":null,"index":-1.0},{"id":366118,"title":"Mike","current_phase_id":254195,"due_date":null,"index":0.0},{"id":366119,"title":"Some
+        other kinda title http://www.test.com","current_phase_id":254195,"due_date":null,"index":1.0}]},{"id":254196,"name":"Pending
+        (Waiting on Borrower)","description":"","done":false,"pipe_id":7915,"index":2.51904296875,"draft":false,"cards":[]},{"id":227880,"name":"Approved","description":"Underwriting
+        team has approved this application. Next step is to notify the customer and
+        generate docs.","done":false,"pipe_id":7915,"index":3.025390625,"draft":false,"cards":[]},{"id":57120,"name":"Docs
+        out","description":"","done":false,"pipe_id":7915,"index":4.0,"draft":false,"cards":[{"id":33732,"title":"My
+        test","current_phase_id":57120,"due_date":null,"index":1.0},{"id":300241,"title":"Mike","current_phase_id":57120,"due_date":"2015-11-20T03:00:00.000-02:00","index":2.0}]},{"id":57121,"name":"Docs
+        in","description":null,"done":false,"pipe_id":7915,"index":5.0,"draft":false,"cards":[{"id":300247,"title":"jaxtreme
+        auto sales & finance  160000 business-capital","current_phase_id":57121,"due_date":null,"index":0.0}]},{"id":254197,"name":"Funding
+        Unresolved","description":null,"done":false,"pipe_id":7915,"index":7.0,"draft":false,"cards":[]},{"id":254198,"name":"Funding
+        Resolved","description":null,"done":false,"pipe_id":7915,"index":8.0,"draft":false,"cards":[]},{"id":227882,"name":"Declined","description":"","done":true,"pipe_id":7915,"index":9.0,"draft":false,"cards":[]}]}'
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 16:32:01 GMT
+- request:
+    method: get
+    uri: https://app.pipefy.com/phases/57116
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"0a9b9958d1f4a4e763d4a4f659658473"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - f9058dd6-a783-49e2-a745-ca776b47991b
+      X-Runtime:
+      - '0.086646'
+      Date:
+      - Tue, 12 Jan 2016 16:32:02 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":57116,"name":"Start form","pipe_id":7915,"index":0.0,"created_at":"2015-08-07T18:56:56.846-03:00","updated_at":"2016-01-12T14:26:41.730-02:00","can_edit":true,"fields":[{"id":178011,"label":"Business
+        Name","options":[],"description":"","is_title_field":true,"type":{"id":1,"name":"Short
+        Text","component":"<input id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\"
+        value=\"<%= value %>\">","html_class":"short-text"}},{"id":792403,"label":"Scorecard","options":[],"description":"","is_title_field":false,"type":{"id":1,"name":"Short
+        Text","component":"<input id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\"
+        value=\"<%= value %>\">","html_class":"short-text"}},{"id":792404,"label":"Score","options":[],"description":"","is_title_field":false,"type":{"id":3,"name":"Number","component":"<input
+        id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\" value=\"<%= value %>\"
+        class=\"numberField\">","html_class":"number"}},{"id":792400,"label":"Tags","options":[],"description":"","is_title_field":false,"type":{"id":20,"name":"Label
+        select","component":"<select id=\"<%= id %>\" name=\"<%= name %>\" multiple=\"true\"
+        class=\"labelSelectField\" data-value=\"<%= value %>\" data-default-select=\"true\"></select>","html_class":"label-select"}},{"id":792401,"label":"Requested
+        Amount","options":[],"description":"","is_title_field":false,"type":{"id":17,"name":"Currency","component":"<input
+        id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\" value=\"<%= value %>\"
+        class=\"currencyField\">","html_class":"currency"}},{"id":792402,"label":"Requested
+        Term","options":[],"description":"months","is_title_field":false,"type":{"id":3,"name":"Number","component":"<input
+        id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\" value=\"<%= value %>\"
+        class=\"numberField\">","html_class":"number"}}],"connected_pipes":[],"jump_targets":[]}'
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 16:32:02 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/pipes/7915/create_card
+    body:
+      encoding: UTF-8
+      string: '{"card":{"title":"Demo Card","field_values":[{"field_id":792403,"value":"https://test.com/123"}]}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/cards/370806
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"62ad5aa6c2b582a49d6ce79a53b969e6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30f15594-4083-4d7c-a51d-b88453e17fe1
+      X-Runtime:
+      - '0.544293'
+      Date:
+      - Tue, 12 Jan 2016 16:32:02 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":370806,"title":"Demo Card","current_phase_id":57117,"due_date":null,"duration":0.464793347,"started_at":"2016-01-12T14:32:02.350-02:00","finished_at":null,"expiration_time":null,"index":24.0,"pipe":{"id":7915,"name":"Loan
+        Application"},"expired":false,"late":false,"draft":false,"done":false,"can_show_pipe":true,"assignees":[],"labels":[],"current_phase_detail":{"id":768379,"duration":-0.631905,"created_at":"2016-01-12T14:32:02.575-02:00","phase_id":57117}}'
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 16:32:02 GMT
+recorded_with: VCR 3.0.0
