@@ -2,6 +2,7 @@ module Pipefy
   class Connection
     attr_reader :headers, :conn
     def initialize email=nil,token=nil
+      puts "hello"
       email ||= ENV['PIPEFY_EMAIL']
       token ||= ENV['PIPEFY_TOKEN']
       raise "Pipefy email required" if email.nil?
@@ -34,6 +35,9 @@ module Pipefy
     def post *args
       @conn.send(:post, *args)
     end
+    def put *args
+      @conn.send(:put, *args)
+    end
     def create_card pipe_name, card_title, field_data={}
       selected_pipe = pipes.find{|item| item["name"] === pipe_name}
       raise "Cannot find pipe named '#{pipe_name}'. The available pipes are #{ pipes.map {|p| p["name"]} }" if selected_pipe.nil?
@@ -47,8 +51,16 @@ module Pipefy
         {field_id: field["id"], value: value}
       end
       card_data = {"card" => {"title" => card_title, field_values: field_values_array}};
-      results = conn.post "/pipes/#{pipe_id}/create_card", card_data
+      results = @conn.post "/pipes/#{pipe_id}/create_card", card_data
       results.body
+    end
+    def jump_to_phase card_id, phase_id
+      res = @conn.put("/cards/#{card_id}/jump_to_phase/#{phase_id}")
+      if res.status === 422
+        raise res.body
+      else
+        return res.body
+      end
     end
   end
 end
