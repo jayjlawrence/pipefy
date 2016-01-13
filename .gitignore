@@ -10,3 +10,4 @@
 .envrc
 *.gem
 .DS_Store
+.env
