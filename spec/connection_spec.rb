@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Pipefy::Connection, :vcr => true do
 
   it 'lists pipes' do
-    expect(subject.pipes.size).to eq(9)
+    expect(subject.pipes.size).to be > 4
   end
 
   it 'fetches pipe by id' do

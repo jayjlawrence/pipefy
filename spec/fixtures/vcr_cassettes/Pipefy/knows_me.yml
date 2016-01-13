@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.pipefy.com/users/current
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"fbb272bf1153d530b6aa7aa9b0718128"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - 704cc27c-37f4-490f-9b91-33fd0c927e75
+      X-Runtime:
+      - '0.032394'
+      Date:
+      - Wed, 13 Jan 2016 20:41:45 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":2746,"name":"Mike Grassotti","username":"mikegrassotti","email":"<PIPEFY_EMAIL>","created_at":"2015-06-30T20:32:57.943-03:00","updated_at":"2016-01-11T17:33:57.239-02:00","display_username":"mikegrassotti"}'
+    http_version: 
+  recorded_at: Wed, 13 Jan 2016 20:41:45 GMT
+recorded_with: VCR 3.0.0
