@@ -34,4 +34,8 @@ require 'Pipefy'
 Pipefy.create_card "Scorecard", "Demo Card", {"URL" => "https://test.com/123"}
 
 ````
+Oh wait better idea you can skip rebuilding gem and just use bundler
 
+````sh
+bundle console
+````
