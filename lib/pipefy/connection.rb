@@ -38,6 +38,9 @@ module Pipefy
     def put *args
       @conn.send(:put, *args)
     end
+    def card id
+      @conn.get("/cards/#{id}").body
+    end
     def create_card pipe_id, card_title, field_data={}
       _pipe = pipe(pipe_id)
       phase_id = _pipe["phases"].first["id"]
