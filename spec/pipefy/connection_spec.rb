@@ -12,7 +12,7 @@ describe Pipefy::Connection, :vcr => true do
 
   it 'creates new cards' do
     expect(
-      subject.create_card("Loan Application", "Demo Card", {"Scorecard" => "https://test.com/123"})
+      subject.create_card(33176, "Demo Card", {})
     ).to(include('title' => 'Demo Card'))
   end
 
