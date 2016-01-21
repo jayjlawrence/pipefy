@@ -1,3 +1,5 @@
+require 'awesome_print'
+
 module Pipefy
   class Connection
     attr_reader :headers, :conn
@@ -30,16 +32,48 @@ module Pipefy
       @conn.get("/pipes/#{id}").body
     end
     def get *args
+      #TODO: Raise error unless we get a 200 response
       @conn.send(:get, *args)
     end
     def post *args
+      #TODO: Raise error unless we get a 201 response
       @conn.send(:post, *args)
     end
     def put *args
+      #TODO: Raise error unless we get a 200 response
       @conn.send(:put, *args)
     end
     def card id
       @conn.get("/cards/#{id}").body
+    end
+    def create_guarantor_background_check parent_card_id, name, ssn, loan_application_id, guarantor_id, company_name, address
+      pipe_id = 33012
+      data = {
+        816556 => name,
+        816557 => ssn,
+        816558 => loan_application_id,
+        816559 => guarantor_id,
+        816560 => company_name,
+        816561 => address
+      }
+      create_connected_card parent_card_id, pipe_id, data
+    end
+    def create_connected_card parent_card_id, pipe_id, fields={}
+      #Create connected card in draft mode
+      ccard = post("/cards/#{parent_card_id}/create_connected_card", 'pipe_id' => pipe_id).body
+      ccard_id = ccard["id"]
+      #Lookup card_phase_detail_id for the card that we just created
+      pcard = card parent_card_id
+      _details = pcard["current_phase_detail"]["connected_cards"].find {|c| c["id"] === ccard["id"]}
+      card_phase_detail_id = _details["current_phase_detail"]["id"]
+      #Set field value(s) as needed
+      fields.each do |key, value| 
+        data = {card_field_value: {field_id: key, card_phase_detail_id: card_phase_detail_id, value: value}}
+        "posting card-field-values:"
+        post("/card_field_values", data)
+      end
+      #Move connected card out of draft phase
+      put("/cards/#{ccard_id}/next_phase")
     end
     def create_card pipe_id, card_title, field_data={}
       _pipe = pipe(pipe_id)
