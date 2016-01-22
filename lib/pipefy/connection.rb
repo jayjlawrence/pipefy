@@ -19,6 +19,7 @@ module Pipefy
         faraday.response :json, :content_type => /\bjson$/
         faraday.response :logger if ENV['PIPEFY_HTTP_LOG']
         faraday.use FaradayMiddleware::FollowRedirects
+        faraday.use Faraday::Response::RaiseError
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
       end
     end
@@ -32,15 +33,12 @@ module Pipefy
       @conn.get("/pipes/#{id}").body
     end
     def get *args
-      #TODO: Raise error unless we get a 200 response
       @conn.send(:get, *args)
     end
     def post *args
-      #TODO: Raise error unless we get a 201 response
       @conn.send(:post, *args)
     end
     def put *args
-      #TODO: Raise error unless we get a 200 response
       @conn.send(:put, *args)
     end
     def card id

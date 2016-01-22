@@ -16,4 +16,8 @@ describe Pipefy::Connection, :vcr => true do
     ).to(include('title' => 'Demo Card'))
   end
 
+  it 'throws error when create card fails' do
+    expect {subject.create_card(1, "FAIL", {}) }.to raise_error
+  end
+
 end
