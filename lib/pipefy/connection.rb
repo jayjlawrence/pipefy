@@ -3,17 +3,16 @@ require 'awesome_print'
 module Pipefy
   class Connection
     attr_reader :headers, :conn
-    def initialize email=nil,token=nil
-      # puts "hello"
-      email ||= ENV['PIPEFY_EMAIL']
-      token ||= ENV['PIPEFY_TOKEN']
-      raise "Pipefy email required" if email.nil?
-      raise "Pipefy token required" if token.nil?
+    def initialize config={}
+      @config = default_config.merge(config)
+      validate_config
+
       @headers = {
-        'X-User-Email' => email,
-        'X-User-Token' => token,
+        'X-User-Email' => @config[:email],
+        'X-User-Token' => @config[:token],
         'Accept' => 'application/json'
       }
+
       @conn = Faraday.new(:url => 'https://app.pipefy.com', headers: headers ) do |faraday|
         faraday.request  :json
         faraday.response :mashify
@@ -24,6 +23,8 @@ module Pipefy
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
       end
     end
+
+
     def me
       get("/users/current")
     end
@@ -93,5 +94,19 @@ module Pipefy
     def put *args
       @conn.send(:put, *args).body
     end
+
+    private 
+      def default_config
+        {
+          email: Pipefy::Config.email,
+          token: Pipefy::Config.token
+        }
+      end
+
+      def validate_config
+        [:email, :token].each do |key|
+          raise "Pipefy #{key} required" if @config[key].nil?
+        end
+      end
   end
 end

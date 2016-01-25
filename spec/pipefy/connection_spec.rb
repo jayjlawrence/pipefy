@@ -20,4 +20,8 @@ describe Pipefy::Connection, :vcr => true do
     expect {subject.create_card(1, "FAIL", {}) }.to raise_error
   end
 
+  describe "#default_config" do
+    subject { Pipefy::Connection.new.send(:default_config) }
+    it { is_expected.to include(:email, :token) }
+  end
 end
