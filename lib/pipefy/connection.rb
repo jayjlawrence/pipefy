@@ -18,7 +18,7 @@ module Pipefy
         faraday.request  :json
         faraday.response :mashify
         faraday.response :json
-        faraday.response :logger if ENV['PIPEFY_HTTP_LOG']
+        faraday.response :detailed_logger if ENV['PIPEFY_HTTP_LOG']
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.use Faraday::Response::RaiseError
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
