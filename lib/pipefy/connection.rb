@@ -2,7 +2,7 @@ require 'awesome_print'
 
 module Pipefy
   class Connection
-    attr_reader :headers, :conn
+    attr_reader :headers, :conn, :logger
     def initialize config={}
       @config = default_config.merge(config)
       validate_config
@@ -13,11 +13,13 @@ module Pipefy
         'Accept' => 'application/json'
       }
 
+      @logger = Pipefy::Config.logger
+
       @conn = Faraday.new(:url => 'https://app.pipefy.com', headers: headers ) do |faraday|
         faraday.request  :json
         faraday.response :mashify
         faraday.response :json
-        faraday.response :detailed_logger if ENV['PIPEFY_HTTP_LOG']
+        faraday.response :detailed_logger, logger if Pipefy::Config.http_log
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.use Faraday::Response::RaiseError
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
