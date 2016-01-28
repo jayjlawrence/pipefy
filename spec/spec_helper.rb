@@ -24,3 +24,7 @@ end
 
 Pipefy::Config.email=ENV['PIPEFY_EMAIL']
 Pipefy::Config.token=ENV['PIPEFY_TOKEN']
+Pipefy::Config.http_log=ENV['PIPEFY_HTTP_LOG']
+
+Pipefy::Config.logger=Logger.new('log/test.log')
+Pipefy::Config.logger.level = Logger::DEBUG

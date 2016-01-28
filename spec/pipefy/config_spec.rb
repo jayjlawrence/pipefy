@@ -14,6 +14,23 @@ describe Pipefy::Config do
     end
   end
 
+  describe "#http_log" do
+    it "is false when set to nil" do
+      Pipefy::Config.http_log=nil
+      expect(Pipefy::Config.http_log).to eq(false)
+    end
+    it "can be set to true with a true string" do
+      Pipefy::Config.http_log="true"
+      expect(Pipefy::Config.http_log).to eq(true)
+    end
+    it "is set to false with not a true string" do
+      ["false", "no", nil, ""].each do |value|
+        Pipefy::Config.http_log=value
+        expect(Pipefy::Config.http_log).to eq(false)
+      end
+    end
+  end
+
   describe "#logger="do
     let(:logger) { Logger.new(STDOUT) }
     it "can set value" do
