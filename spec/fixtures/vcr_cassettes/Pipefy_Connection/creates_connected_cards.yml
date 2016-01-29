@@ -1,0 +1,587 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.pipefy.com/cards/407309/create_connected_card
+    body:
+      encoding: UTF-8
+      string: '{"pipe_id":33012}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"75130c0789f5e65c130794d9a9316024"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1ae26e73-d367-4165-a3bf-b8ab8e6bf2b6
+      X-Runtime:
+      - '0.157813'
+      Date:
+      - Fri, 29 Jan 2016 17:31:03 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":416925,"title":"Draft","current_phase_id":262948,"due_date":null,"duration":0.081459051,"started_at":"2016-01-29T17:31:03.611Z","finished_at":null,"expiration_time":null,"index":null,"token":"30c5a9e62f430ed70cfb303df52d2d2e810832d0"}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:03 GMT
+- request:
+    method: get
+    uri: https://app.pipefy.com/cards/407309
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"b31c499bf1fd09cbbf59145eca4a8a33"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - 325bbc17-177a-4c12-bf10-afa14812d42b
+      X-Runtime:
+      - '0.217936'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":407309,"title":"Fadel-Labadie","current_phase_id":266188,"due_date":null,"duration":339864.240290016,"started_at":"2016-01-25T19:06:39.631Z","finished_at":null,"expiration_time":null,"index":8.0,"token":"ec31c6d18c70b4983a48436f6209a0f9ff2eb84f","pipe":{"id":33457,"name":"LoanApplication
+        Background Checks Test"},"expired":false,"late":false,"draft":false,"done":false,"can_show_pipe":true,"can_move_to_previous":true,"previous_phase":{"id":266187,"name":"Start
+        form","draft":false},"next_phase":{"id":266190,"name":"Done"},"assignees":[],"labels":[],"current_phase_detail":{"id":841705,"duration":339863.151515,"created_at":"2016-01-25T19:06:39.778Z","phase":{"id":266188,"name":"Inbox","done":false,"pipe_id":33457,"draft":false,"can_edit":true,"pipe":{"id":33457,"name":"LoanApplication
+        Background Checks Test","users":[{"id":2746,"name":"mike18","username":"mikegrassotti","email":"mike@liftforward.com","display_username":"mikegrassotti"},{"id":18056,"name":"drew2","username":"drewnichols","email":"<PIPEFY_EMAIL>","display_username":"drewnichols"},{"id":18226,"name":"liftbot1","username":"liftbot","email":"liftbot@liftforward.com","display_username":"liftbot"}],"labels":[]},"fields":[],"pipe_connections":[{"id":1058,"pipe":{"id":33012,"name":"Background
+        Check"}}],"automated_message_setups":[],"jump_targets":[]},"connected_cards":[{"id":416925,"title":"Draft","duration":0.305113773,"started_at":"2016-01-29T17:31:03.611Z","finished_at":null,"expiration_time":null,"draft":true,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":864369,"phase_id":262948,"phase":{"id":262948,"name":"Start
+        form","pipe_id":33012}}},{"id":416913,"title":"Donald Trump","duration":104.271394591,"started_at":"2016-01-29T17:29:19.654Z","finished_at":null,"expiration_time":null,"draft":false,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":864339,"phase_id":262949,"phase":{"id":262949,"name":"Inbox","pipe_id":33012}}},{"id":416891,"title":"Donald
+        Trump","duration":762.55143909,"started_at":"2016-01-29T17:18:21.384Z","finished_at":null,"expiration_time":null,"draft":false,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":864288,"phase_id":262949,"phase":{"id":262949,"name":"Inbox","pipe_id":33012}}},{"id":409721,"title":"Donald
+        Trump","duration":257699.733652057,"started_at":"2016-01-26T17:56:04.210Z","finished_at":null,"expiration_time":null,"draft":false,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":847319,"phase_id":262949,"phase":{"id":262949,"name":"Inbox","pipe_id":33012}}},{"id":409705,"title":"Donald
+        Trump","duration":258196.852299868,"started_at":"2016-01-26T17:47:47.099Z","finished_at":null,"expiration_time":null,"draft":false,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":847271,"phase_id":262949,"phase":{"id":262949,"name":"Inbox","pipe_id":33012}}},{"id":407310,"title":null,"duration":339864.161216483,"started_at":"2016-01-25T19:06:39.798Z","finished_at":null,"expiration_time":null,"draft":true,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":841706,"phase_id":262948,"phase":{"id":262948,"name":"Start
+        form","pipe_id":33012}}}],"checklists":[],"field_values":[],"automated_messages":[],"comments":[]},"other_phase_details":[{"id":841704,"created_at":"2016-01-25T19:06:39.641Z","finished_at":"2016-01-25T19:06:39.856Z","duration":0.200571,"late":false,"expired":false,"phase":{"id":266187,"name":"Start
+        form","done":false,"pipe_id":33457,"draft":true,"fields":[{"id":826085,"label":"Company
+        Name","options":[],"description":"","is_title_field":true,"help_html":null,"editable":false,"type":{"id":1,"name":"Short
+        Text","component":"<input id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\"
+        value=\"<%= value %>\">","html_class":"short-text","editable":true,"multiple":false,"assignee":false,"label":false}},{"id":826070,"label":"loan_application_id","options":[],"description":"","is_title_field":false,"help_html":null,"editable":false,"type":{"id":3,"name":"Number","component":"<input
+        id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\" value=\"<%= value %>\"
+        class=\"numberField\">","html_class":"number","editable":true,"multiple":false,"assignee":false,"label":false}}]},"field_values":[{"id":1318462,"value":"Fadel-Labadie","display_value":"Fadel-Labadie","field_id":826085},{"id":1318461,"value":"17","display_value":"17","field_id":826070}],"checklists":[],"connected_cards":[],"automated_messages":[],"comments":[]}],"checklists":[]}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:04 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816556,"card_phase_detail_id":864369,"value":"Donald
+        Trump"}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354152
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"b89590df2da106b77b5c3228f15ec0b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 897e3a4a-7294-47ab-91c4-51ec281b5ae5
+      X-Runtime:
+      - '0.119867'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354152,"field_id":816556,"value":"Donald Trump","display_value":"Donald
+        Trump","created_at":"2016-01-29T17:31:04.189Z","updated_at":"2016-01-29T17:31:04.189Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:04 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816557,"card_phase_detail_id":864369,"value":"123456789"}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354153
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"f97789025a32aa4cf73dd6095102d72c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb509a01-7aa5-4922-a6f4-c037244fcc6f
+      X-Runtime:
+      - '0.091942'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354153,"field_id":816557,"value":"123456789","display_value":"123456789","created_at":"2016-01-29T17:31:04.393Z","updated_at":"2016-01-29T17:31:04.393Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:04 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816558,"card_phase_detail_id":864369,"value":123}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354154
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"bde6d6b9a5e0d662f111c4179833d175"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f124f9ea-6214-44b0-962e-d0291d98d451
+      X-Runtime:
+      - '0.091044'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354154,"field_id":816558,"value":123,"display_value":123,"created_at":"2016-01-29T17:31:04.580Z","updated_at":"2016-01-29T17:31:04.580Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:04 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816559,"card_phase_detail_id":864369,"value":1234}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354155
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"d12736a7ad2990460b33abe7f51a1a37"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 271bead5-fa99-4cba-ba9b-b5a8155d09c8
+      X-Runtime:
+      - '0.088732'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354155,"field_id":816559,"value":1234,"display_value":1234,"created_at":"2016-01-29T17:31:04.763Z","updated_at":"2016-01-29T17:31:04.763Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:04 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816560,"card_phase_detail_id":864369,"value":"POTUS"}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354156
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"36335d86a591f6bf36682acb6b2f696c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ddc7e25a-eeb6-40b8-a00b-11e4aba72300
+      X-Runtime:
+      - '0.089433'
+      Date:
+      - Fri, 29 Jan 2016 17:31:04 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354156,"field_id":816560,"value":"POTUS","display_value":"POTUS","created_at":"2016-01-29T17:31:04.945Z","updated_at":"2016-01-29T17:31:04.945Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:05 GMT
+- request:
+    method: post
+    uri: https://app.pipefy.com/card_field_values
+    body:
+      encoding: UTF-8
+      string: '{"card_field_value":{"field_id":816561,"card_phase_detail_id":864369,"value":"Washington
+        DC"}}'
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/card_field_values/1354157
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"01dc3c575acc1c07fa8ed29ebb6aabae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e938e5f-35d6-4e5f-b874-0a6a16da67a7
+      X-Runtime:
+      - '0.106959'
+      Date:
+      - Fri, 29 Jan 2016 17:31:05 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":1354157,"field_id":816561,"value":"Washington DC","display_value":"Washington
+        DC","created_at":"2016-01-29T17:31:05.137Z","updated_at":"2016-01-29T17:31:05.137Z","card":{"id":416925,"due_date":null,"labels":[],"assignees":[]}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:05 GMT
+- request:
+    method: put
+    uri: https://app.pipefy.com/cards/416925/next_phase
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://app.pipefy.com/cards/416925
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"dcf42e74f6ffd4d53702b15327691879"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b7f2c9c-f85c-4294-ad25-b242114b96c9
+      X-Runtime:
+      - '0.352763'
+      Date:
+      - Fri, 29 Jan 2016 17:31:05 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":416925,"title":"Donald Trump","current_phase_id":262949,"due_date":null,"duration":1.996354417,"started_at":"2016-01-29T17:31:03.611Z","finished_at":null,"expiration_time":null,"index":48.0,"pipe":{"id":33012,"name":"Background
+        Check"},"expired":false,"late":false,"draft":false,"done":false,"can_show_pipe":true,"assignees":[],"labels":[],"current_phase_detail":{"id":864370,"duration":-0.480552,"created_at":"2016-01-29T17:31:05.457Z","phase_id":262949}}'
+    http_version: 
+  recorded_at: Fri, 29 Jan 2016 17:31:05 GMT
+recorded_with: VCR 3.0.1

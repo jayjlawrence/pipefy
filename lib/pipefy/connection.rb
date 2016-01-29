@@ -42,18 +42,6 @@ module Pipefy
     def find_pipes
       get("/pipes")
     end
-    def create_guarantor_background_check parent_card_id, name, ssn, loan_application_id, guarantor_id, company_name, address
-      pipe_id = 33012
-      data = {
-        816556 => name,
-        816557 => ssn,
-        816558 => loan_application_id,
-        816559 => guarantor_id,
-        816560 => company_name,
-        816561 => address
-      }
-      create_connected_card parent_card_id, pipe_id, data
-    end
     def create_connected_card parent_card_id, pipe_id, fields={}
       #Create connected card in draft mode
       ccard = post("/cards/#{parent_card_id}/create_connected_card", 'pipe_id' => pipe_id)
@@ -67,7 +55,7 @@ module Pipefy
         post("/card_field_values", data)
       end
       #Move connected card out of draft phase
-      put("/cards/#{ccard_id}/next_phase")
+      put("/cards/#{ccard.id}/next_phase")
     end
     def create_card pipe_id, card_title, field_data={}
       _pipe = find_pipe(pipe_id)
