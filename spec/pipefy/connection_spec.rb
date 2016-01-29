@@ -36,6 +36,15 @@ describe Pipefy::Connection, :vcr => true do
                             'pipe', 'started_at', 'title')
   end
 
+  it 'finds connected pipes' do
+    card_id = 417365
+    connected_pipes = subject.connected_pipes card_id
+    # ap current_phase_detail.phase.pipe_connections
+    expect(connected_pipes).to be_a(Array)
+
+    # expect(connected_pipes).to each_include('id', 'pipe')
+  end
+
   it 'throws error when create card fails' do
     expect {subject.create_card(1, "FAIL", {}) }.to raise_error
   end

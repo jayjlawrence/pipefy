@@ -42,21 +42,30 @@ module Pipefy
     def find_pipes
       get("/pipes")
     end
+
+    def connected_pipes card_id
+      pipes = find_card(card_id)
+      pipes.current_phase_detail.phase.pipe_connections.map { |p| p.pipe }
+    end
+
+
     def create_connected_card parent_card_id, pipe_id, fields={}
       #Create connected card in draft mode
       ccard = post("/cards/#{parent_card_id}/create_connected_card", 'pipe_id' => pipe_id)
       #Lookup card_phase_detail_id for the card that we just created
-      pcard = find_card(parent_card_id)
-      _details = pcard.current_phase_detail.connected_cards.find {|c| c.id === ccard.id}
-      card_phase_detail_id = _details.current_phase_detail.id
+       pcard = find_card(parent_card_id)
+       _details = pcard.current_phase_detail.connected_cards.find {|c| c.id === ccard.id}
+       card_phase_detail_id = _details.current_phase_detail.id
+
       #Set field value(s) as needed
       fields.each do |key, value| 
-        data = {card_field_value: {field_id: key, card_phase_detail_id: card_phase_detail_id, value: value}}
+        data = {card_field_value: {field_id: key, phase_id: card_phase_detail_id, value: value}}
         post("/card_field_values", data)
       end
       #Move connected card out of draft phase
       put("/cards/#{ccard.id}/next_phase")
     end
+
     def create_card pipe_id, card_title, field_data={}
       _pipe = find_pipe(pipe_id)
       phase_id = _pipe.phases.first.id
