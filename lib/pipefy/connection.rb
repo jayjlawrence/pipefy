@@ -43,11 +43,9 @@ module Pipefy
       get("/pipes")
     end
 
-    def connected_pipes card_id
-      pipes = find_card(card_id)
-      pipes.current_phase_detail.phase.pipe_connections.map { |p| p.pipe }
+    def current_phase_connected_pipes card_id
+      find_card(card_id).current_phase_detail.phase.pipe_connections.map { |p| p.pipe }
     end
-
 
     def create_connected_card parent_card_id, pipe_id, fields={}
       #Create connected card in draft mode

@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.pipefy.com/cards/417365
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-User-Email:
+      - "<PIPEFY_EMAIL>"
+      X-User-Token:
+      - "<PIPEFY_TOKEN>"
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"9613f1cbf84e546fac75fc4f5afeeb02"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - "<PIPEFY_SESSION_COOKIE>"
+      - request_method=GET; path=/; secure
+      X-Request-Id:
+      - 9d6e995d-9956-4128-9873-bb68d31d60fd
+      X-Runtime:
+      - '0.236618'
+      Date:
+      - Sat, 30 Jan 2016 13:17:48 GMT
+      X-Rack-Cache:
+      - miss
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":417365,"title":"Medhurst-Weimann","current_phase_id":267527,"due_date":null,"duration":99.210536,"started_at":"2016-01-29T21:12:40.376Z","finished_at":"2016-01-29T21:14:19.586Z","expiration_time":null,"index":0.0,"token":"45e8c35ba6b2ddac0eb0b86fdcfff18b9e9a0f4a","pipe":{"id":33633,"name":"TEST
+        LoanApplication"},"expired":false,"late":false,"draft":false,"done":false,"can_show_pipe":true,"can_move_to_previous":true,"previous_phase":{"id":267526,"name":"Inbox","draft":false},"next_phase":{"id":278355,"name":"Background
+        Checks"},"assignees":[],"labels":[],"current_phase_detail":{"id":865516,"duration":95.995498,"created_at":"2016-01-29T21:13:20.598Z","phase":{"id":267527,"name":"Doing","done":false,"pipe_id":33633,"draft":false,"can_edit":true,"pipe":{"id":33633,"name":"TEST
+        LoanApplication","users":[{"id":2746,"name":"mike18","username":"mikegrassotti","email":"mike@liftforward.com","display_username":"mikegrassotti"},{"id":18056,"name":"drew2","username":"drewnichols","email":"<PIPEFY_EMAIL>","display_username":"drewnichols"},{"id":18226,"name":"liftbot1","username":"liftbot","email":"liftbot@liftforward.com","display_username":"liftbot"}],"labels":[]},"fields":[],"pipe_connections":[],"automated_message_setups":[],"jump_targets":[]},"connected_cards":[],"checklists":[],"field_values":[],"automated_messages":[],"comments":[]},"other_phase_details":[{"id":865512,"created_at":"2016-01-29T21:12:40.387Z","finished_at":"2016-01-29T21:12:40.570Z","duration":0.149898,"late":false,"expired":false,"phase":{"id":267525,"name":"Start
+        form","done":false,"pipe_id":33633,"draft":true,"fields":[{"id":830124,"label":"Business
+        Name","options":[],"description":"","is_title_field":true,"help_html":null,"editable":false,"type":{"id":1,"name":"Short
+        Text","component":"<input id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\"
+        value=\"<%= value %>\">","html_class":"short-text","editable":true,"multiple":false,"assignee":false,"label":false}},{"id":830208,"label":"Scorecard","options":[],"description":"","is_title_field":false,"help_html":null,"editable":true,"type":{"id":1,"name":"Short
+        Text","component":"<input id=\"<%= id %>\" name=\"<%= name %>\" type=\"text\"
+        value=\"<%= value %>\">","html_class":"short-text","editable":true,"multiple":false,"assignee":false,"label":false}}]},"field_values":[{"id":1356118,"value":"Medhurst-Weimann","display_value":"Medhurst-Weimann","field_id":830124},{"id":1356119,"value":"http://localhost:4200/loan-applications/987","display_value":"http://localhost:4200/loan-applications/987","field_id":830208}],"checklists":[],"connected_cards":[],"automated_messages":[],"comments":[]},{"id":865513,"created_at":"2016-01-29T21:12:40.548Z","finished_at":"2016-01-29T21:15:39.162Z","duration":83.467965,"late":false,"expired":false,"phase":{"id":267526,"name":"Inbox","done":false,"pipe_id":33633,"draft":false,"fields":[]},"field_values":[],"checklists":[],"connected_cards":[{"id":417366,"title":"Llewellyn
+        Stroman","duration":57907.839618885,"started_at":"2016-01-29T21:12:40.842Z","finished_at":null,"expiration_time":null,"draft":false,"done":false,"can_show_pipe":true,"current_phase_detail":{"id":865515,"phase_id":262949,"phase":{"id":262949,"name":"Inbox","pipe_id":33012}}}],"automated_messages":[],"comments":[]},{"id":865517,"created_at":"2016-01-29T21:13:37.324Z","finished_at":"2016-01-30T13:17:25.809Z","duration":57711.300397,"late":false,"expired":false,"phase":{"id":278355,"name":"Background
+        Checks","done":false,"pipe_id":33633,"draft":false,"fields":[]},"field_values":[],"checklists":[],"connected_cards":[],"automated_messages":[],"comments":[]},{"id":865518,"created_at":"2016-01-29T21:14:19.597Z","finished_at":"2016-01-29T21:14:36.364Z","duration":16.752749,"late":false,"expired":false,"phase":{"id":267528,"name":"Done","done":true,"pipe_id":33633,"draft":false,"fields":[]},"field_values":[],"checklists":[],"connected_cards":[],"automated_messages":[],"comments":[]}],"checklists":[]}'
+    http_version: 
+  recorded_at: Sat, 30 Jan 2016 13:17:49 GMT
+recorded_with: VCR 3.0.1

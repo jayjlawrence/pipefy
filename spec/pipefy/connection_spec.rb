@@ -36,13 +36,29 @@ describe Pipefy::Connection, :vcr => true do
                             'pipe', 'started_at', 'title')
   end
 
-  it 'finds connected pipes' do
-    card_id = 417365
-    connected_pipes = subject.connected_pipes card_id
-    # ap current_phase_detail.phase.pipe_connections
-    expect(connected_pipes).to be_a(Array)
+  describe '#current_phase_connected_pipes' do
 
-    # expect(connected_pipes).to each_include('id', 'pipe')
+    context 'provided card has access to 1 connected pipe in current phase' do
+      it 'returns array of 1 connected pipes' do
+        card_id = 417365
+        connected_pipes = subject.current_phase_connected_pipes card_id
+        # ap current_phase_detail.phase.pipe_connections
+        expect(connected_pipes).to be_a(Array)
+        expect(connected_pipes).not_to be_empty
+        expect(connected_pipes).to all(include('id', 'name'))
+      end
+    end
+
+    context 'provided card has access to 0 connected pipe in current phase' do
+      it 'returns array of 1 connected pipes' do
+        card_id = 417365
+        connected_pipes = subject.current_phase_connected_pipes card_id
+        # ap current_phase_detail.phase.pipe_connections
+        expect(connected_pipes).to be_a(Array)
+        expect(connected_pipes).to be_empty
+      end
+    end
+
   end
 
   it 'throws error when create card fails' do
