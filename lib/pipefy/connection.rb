@@ -57,7 +57,7 @@ module Pipefy
 
       #Set field value(s) as needed
       fields.each do |key, value| 
-        data = {card_field_value: {field_id: key, phase_id: card_phase_detail_id, value: value}}
+        data = {card_field_value: {field_id: key, card_phase_detail_id: card_phase_detail_id, value: value}}
         post("/card_field_values", data)
       end
       #Move connected card out of draft phase
@@ -76,6 +76,7 @@ module Pipefy
       card_data = {"card" => {"title" => card_title, field_values: field_values_array}};
       post("/pipes/#{pipe_id}/create_card", card_data)
     end
+    
     def jump_to_phase card_id, phase_id
       put("/cards/#{card_id}/jump_to_phase/#{phase_id}")
     end
